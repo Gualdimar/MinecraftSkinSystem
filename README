@@ -2,6 +2,9 @@
 Иструкции ищите на Wiki(будут позже)
 https://github.com/byxar/MinecraftSkinSystem/wiki
 
+ОБО ВСЕХ ОШИБКАХ СООБЩАЙТЕ ЗДЕСЬ
+https://github.com/byxar/MinecraftSkinSystem/issues
+
 Описание директорий:
 auth_system - файлы системы авторизации
 	auth_system_check_scripts - скрипты для проверки работоспособности системы авторизации
