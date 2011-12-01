@@ -30,14 +30,16 @@ function hash_cauth()
 	global $realPass, $postPass;
 	
 	$cryptPass = false;
-	if (strlen($realPass) == 32)
+	if (strlen($realPass) < 32)
 	{
 		$cryptPass = md5($postPass);
+		$rp = str_replace('0', '', $realPass);
+		$cp = str_replace('0', '', $cryptPass);
+		(strcasecmp($rp,$cp) == 0 ? $cryptPass = $realPass : $cryptPass = false);
 	}
 	else
 	{
-		$pass = md5($postPass);
-		$cryptPass = substr($pass,0,8) . substr($pass,-23);
+		$cryptPass = md5($postPass);
 	}
 	
 	return $cryptPass;
