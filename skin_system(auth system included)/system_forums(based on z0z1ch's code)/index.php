@@ -65,9 +65,9 @@ if ($login == 'on')
 
 				if ($crypt == 'hash_ipb')
 				{
-					$row = mysql_fetch_assoc(mysql_query("SELECT $db_columnId,$db_columnUser,$db_columnPass,$db_columnSalt FROM $db_table WHERE $db_columnUser='{$_POST['username']}'"));
+					$row = mysql_fetch_assoc(mysql_query("SELECT $db_columnId,$db_columnUser,$db_columnPass,$db_columnOther FROM $db_table WHERE $db_columnUser='{$_POST['username']}'"));
 					$realPass = $row[$db_columnPass];
-					$salt = $row[$db_columnSalt];
+					$salt = $row[$db_columnOther];
 				}
 					
 				if ($crypt == 'hash_xenforo')
