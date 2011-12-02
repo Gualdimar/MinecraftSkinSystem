@@ -71,7 +71,7 @@ $db_columnPass  = 'data';
 $db_tableOther = 'xf_user_authenticate';
 
 // Настраивается для IPB
-$db_columnOther = 'members_pass_salt';
+$db_columnSalt = 'members_pass_salt';
 
 // НАСТРОЙКИ ТАБЛИЦЫ ДЛЯ ЗАЩИТЫ ОТ ПОДБОРА ПАРОЛЕЙ
 
