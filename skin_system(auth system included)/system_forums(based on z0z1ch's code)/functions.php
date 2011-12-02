@@ -71,7 +71,7 @@ function hash_joomla()
 
 function hash_ipb()
 {
-	global $realPass, $postPass, $salt;
+	global $postPass, $salt;
 	
 	$cryptPass = false;
 	$cryptPass = md5(md5($salt).md5($postPass));
@@ -81,7 +81,7 @@ function hash_ipb()
 
 function hash_xenforo()
 {
-	global $realPass, $postPass, $salt;
+	global $postPass, $salt;
 	
 	$cryptPass = false;
 	$cryptPass = hash('sha256', hash('sha256', $postPass) . $salt);
