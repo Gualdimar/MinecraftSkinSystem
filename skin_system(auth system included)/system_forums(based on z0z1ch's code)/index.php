@@ -38,7 +38,7 @@ if ($login == 'on')
 	{
 		$err = array();
 		
-		if ($crypt == 'hash_md5' || $crypt == 'hash_authme' || $crypt == 'hash_xauth' || $crypt == 'hash_cauth' || $crypt == 'hash_joomla' || $crypt == 'hash_ipb' || $crypt == 'hash_xenforo' || $crypt == 'hash_wordpress')
+		if ($crypt == 'hash_md5' || $crypt == 'hash_authme' || $crypt == 'hash_xauth' || $crypt == 'hash_cauth' || $crypt == 'hash_joomla' || $crypt == 'hash_ipb' || $crypt == 'hash_xenforo' || $crypt == 'hash_wordpress' || $crypt == 'hash_vbulletin')
 		{
 		
 			if(!$_POST['username'] || !$_POST['password'])
@@ -63,7 +63,7 @@ if ($login == 'on')
 					$realPass = $row[$db_columnPass];
 				}
 
-				if ($crypt == 'hash_ipb')
+				if ($crypt == 'hash_ipb' || $crypt == 'hash_vbulletin')
 				{
 					$row = mysql_fetch_assoc(mysql_query("SELECT $db_columnId,$db_columnUser,$db_columnPass,$db_columnOther FROM $db_table WHERE $db_columnUser='{$_POST['username']}'"));
 					$realPass = $row[$db_columnPass];

@@ -13,7 +13,7 @@ $db_database - имя базы данных, значение по умолча�
 AuthMe = 'authme'
 xAuth = отсутствует (указывается вручную)
 CAuth = 'cauth'
-Joomla,IPB,XenForo,WordPress - отсутствует (указывается вручную)
+Joomla,IPB,XenForo,WordPress,vBulletin - отсутствует (указывается вручную)
 */
 $db_database	= '_xf';
 
@@ -26,6 +26,7 @@ Joomla = 'префикс_users' - пример 'y3wbm_users', где "y3wbm_" - 
 IPB = 'members'
 XenForo = 'префикс_user' - пример 'xf_user', где "xf_" - префикс. Примечание префикс может отсутствовать - пример 'user'
 WordPress = 'префикс_users' - пример 'wp_users', где "wp_" - префикс. Примечание префикс может отсутствовать - пример 'users'
+vBulletin = 'префикс_user'
 */
 $db_table       = 'xf_user';
 
@@ -38,6 +39,7 @@ Joomla = 'id'
 IPB = 'member_id'
 XenForo = 'user_id'
 WordPress = 'id'
+vBulletin = 'userid'
 */
 $db_columnId  = 'user_id';
 
@@ -50,6 +52,7 @@ Joomla = 'name'
 PB = 'name'
 XenForo = 'username'
 WordPress = 'user_login'
+vBulletin = 'username'
 */
 $db_columnUser  = 'username';
 
@@ -62,6 +65,7 @@ Joomla = 'password'
 IPB = 'members_pass_hash'
 XenForo = 'data'
 WordPress = 'user_pass'
+vBulletin = 'password'
 */
 $db_columnPass  = 'data';
 
@@ -70,7 +74,9 @@ $db_columnPass  = 'data';
 // Настраивается только для XenForo 'префикс_user_authenticate' - пример 'xf_user_authenticate', где "xf_" - префикс. Примечание префикс может отсутствовать - пример 'user_authenticate'
 $db_tableOther = 'xf_user_authenticate';
 
-// Настраивается для IPB
+// Настраивается для IPB и vBulletin
+// IPB - members_pass_salt
+//vBulletin - salt
 $db_columnOther = 'members_pass_salt';
 
 // НАСТРОЙКИ АВТОРИЗАЦИИ ЧЕРЕЗ ЛАУНЧЕР

@@ -132,6 +132,16 @@ function hash_wordpress()
 	return $cryptPass;
 }
 
+function hash_vbulletin()
+{
+	global $postPass, $salt;
+
+	$cryptPass = false;
+	$cryptPass = md5(md5($postPass) . $salt));
+
+	return $cryptPass;
+}
+
 function uploadHandle($max_file_size = 5, $upload_dir = '.')  
     {  
 		global $dir_skins, $dir_cloaks, $username;
