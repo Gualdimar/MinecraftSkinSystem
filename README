@@ -9,7 +9,7 @@ https://github.com/byxar/MinecraftSkinSystem/issues
 auth_system - файлы системы авторизации
 	auth_system_check_scripts - скрипты для проверки работоспособности системы авторизации
 	auth_system_launcher_src - исходники лаунчера
-	auth_system_scripts - сама система
+	auth_system_scripts - сама система(с поддержкой форумов)
 
 skin_system - файлы системы скинов(вместе с системой авторизации)
 	system(byxar's edition) - самостоятельная версия системы, с измененным интерфейсом, регистрацией, формой обратной связи, страницей загрузок, страницей смены пароля, страницей восстановления пароля, формой обратной связи каптчей и защитой от подбора паролей.
@@ -27,3 +27,4 @@ IPB
 XenForo
 WordPress
 vBulletin
+DLE
