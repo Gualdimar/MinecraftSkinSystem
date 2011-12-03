@@ -79,7 +79,7 @@ require 'config.php';
 					$realPass = $row[$db_columnPass];
 				}
 
-				if ($crypt == 'hash_ipb')
+				if ($crypt == 'hash_ipb' || $crypt == 'hash_vbulletin')
 				{
 					$row = mysql_fetch_assoc(mysql_query("SELECT $db_columnId,$db_columnUser,$db_columnPass,$db_columnSalt FROM $db_table WHERE $db_columnUser='{$_POST['username']}'"));
 					$realPass = $row[$db_columnPass];
