@@ -25,6 +25,7 @@ CAuth = 'users'
 Joomla = 'префикс_users' - пример 'y3wbm_users', где "y3wbm_" - префикс. Примечание префикс может отсутствовать - пример 'users'
 IPB = 'members'
 XenForo = 'префикс_user' - пример 'xf_user', где "xf_" - префикс. Примечание префикс может отсутствовать - пример 'user'
+vBulletin = 'префикс_user
 WordPress = 'префикс_users' - пример 'wp_users', где "wp_" - префикс. Примечание префикс может отсутствовать - пример 'users'
 */
 $db_table       = 'xf_user';
@@ -37,6 +38,7 @@ CAuth = 'id'
 Joomla = 'id'
 IPB = 'member_id'
 XenForo = 'user_id'
+vBulletin = 'userid'
 WordPress = 'id'
 */
 $db_columnId  = 'user_id';
@@ -49,6 +51,7 @@ CAuth = 'login'
 Joomla = 'name'
 PB = 'name'
 XenForo = 'username'
+vBulletin = 'username'
 WordPress = 'user_login'
 */
 $db_columnUser  = 'username';
@@ -61,6 +64,7 @@ CAuth = 'password'
 Joomla = 'password'
 IPB = 'members_pass_hash'
 XenForo = 'data'
+vBulletin = 'password'
 WordPress = 'user_pass'
 */
 $db_columnPass  = 'data';
@@ -70,7 +74,9 @@ $db_columnPass  = 'data';
 // Настраивается только для XenForo 'префикс_user_authenticate' - пример 'xf_user_authenticate', где "xf_" - префикс. Примечание префикс может отсутствовать - пример 'user_authenticate'
 $db_tableOther = 'xf_user_authenticate';
 
-// Настраивается для IPB
+// Настраивается для IPB и vBulletin
+// IPB - members_pass_salt
+//vBulletin - salt
 $db_columnSalt = 'members_pass_salt';
 
 // НАСТРОЙКИ ТАБЛИЦЫ ДЛЯ ЗАЩИТЫ ОТ ПОДБОРА ПАРОЛЕЙ

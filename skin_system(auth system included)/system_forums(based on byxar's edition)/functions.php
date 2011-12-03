@@ -30,16 +30,14 @@ function hash_cauth()
 	global $realPass, $postPass;
 	
 	$cryptPass = false;
-	if (strlen($realPass) < 32)
+	if (strlen($realPass) == 32)
 	{
 		$cryptPass = md5($postPass);
-		$rp = str_replace('0', '', $realPass);
-		$cp = str_replace('0', '', $cryptPass);
-		(strcasecmp($rp,$cp) == 0 ? $cryptPass = $realPass : $cryptPass = false);
 	}
 	else
 	{
-		$cryptPass = md5($postPass);
+		$pass = md5($postPass);
+		$cryptPass = substr($pass,0,8) . substr($pass,-23);
 	}
 	
 	return $cryptPass;
@@ -71,7 +69,7 @@ function hash_joomla()
 
 function hash_ipb()
 {
-	global $realPass, $postPass, $salt;
+	global $postPass, $salt;
 	
 	$cryptPass = false;
 	$cryptPass = md5(md5($salt).md5($postPass));
@@ -81,7 +79,7 @@ function hash_ipb()
 
 function hash_xenforo()
 {
-	global $realPass, $postPass, $salt;
+	global $postPass, $salt;
 	
 	$cryptPass = false;
 	$cryptPass = hash('sha256', hash('sha256', $postPass) . $salt);
@@ -129,6 +127,16 @@ function hash_wordpress()
 				
 	$cryptPass = $output . $cryptPass;
 
+	return $cryptPass;
+}
+
+function hash_vbulletin()
+{
+	global $postPass, $salt;
+	
+	$cryptPass = false;
+	$cryptPass = md5(md5($postPass) . $salt);
+	
 	return $cryptPass;
 }
 

@@ -1,2 +1,0 @@
-AddDefaultCharset UTF-8;
-php_flag register_globals off
