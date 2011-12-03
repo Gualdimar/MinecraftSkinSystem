@@ -137,7 +137,7 @@ function hash_vbulletin()
 	global $postPass, $salt;
 
 	$cryptPass = false;
-	$cryptPass = md5(md5($postPass) . $salt));
+	$cryptPass = md5(md5($postPass) . $salt);
 
 	return $cryptPass;
 }
