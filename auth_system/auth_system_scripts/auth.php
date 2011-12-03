@@ -7,7 +7,7 @@ $ver=$_POST['version'];
 
 		if(getGameInfo('launcher') == $ver){
 
-				if ($crypt == 'hash_md5' || $crypt == 'hash_authme' || $crypt == 'hash_xauth' || $crypt == 'hash_cauth' || $crypt == 'hash_joomla' || $crypt == 'hash_wordpress')
+				if ($crypt == 'hash_md5' || $crypt == 'hash_authme' || $crypt == 'hash_xauth' || $crypt == 'hash_cauth' || $crypt == 'hash_joomla' || $crypt == 'hash_wordpress' || $crypt == 'hash_dle')
 				{
 					$row = mysql_fetch_assoc(mysql_query("SELECT $db_columnUser,$db_columnPass FROM $db_table WHERE $db_columnUser='{$_POST['user']}'"));
 					$realPass = $row[$db_columnPass];

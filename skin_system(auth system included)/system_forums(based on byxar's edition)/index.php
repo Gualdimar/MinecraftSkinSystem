@@ -40,7 +40,7 @@ require 'config.php';
 	{
 		$err = array();
 
-		if ($crypt == 'hash_md5' || $crypt == 'hash_authme' || $crypt == 'hash_xauth' || $crypt == 'hash_cauth' || $crypt == 'hash_joomla' || $crypt == 'hash_ipb' || $crypt == 'hash_xenforo' || $crypt == 'hash_wordpress' || $crypt == 'hash_vbulletin')
+		if ($crypt == 'hash_md5' || $crypt == 'hash_authme' || $crypt == 'hash_xauth' || $crypt == 'hash_cauth' || $crypt == 'hash_joomla' || $crypt == 'hash_ipb' || $crypt == 'hash_xenforo' || $crypt == 'hash_wordpress' || $crypt == 'hash_vbulletin' || $crypt == 'hash_dle')
 		{
 			$ip=getenv("HTTP_X_FORWARDED_FOR");
 			if (empty($ip) || $ip=='unknown') 
@@ -73,7 +73,7 @@ require 'config.php';
 				$_POST['rememberMe'] = (int)$_POST['rememberMe'];
 				$postPass = $_POST['password'];
 
-				if ($crypt == 'hash_md5' || $crypt == 'hash_authme' || $crypt == 'hash_xauth' || $crypt == 'hash_cauth' || $crypt == 'hash_joomla' || $crypt == 'hash_wordpress')
+				if ($crypt == 'hash_md5' || $crypt == 'hash_authme' || $crypt == 'hash_xauth' || $crypt == 'hash_cauth' || $crypt == 'hash_joomla' || $crypt == 'hash_wordpress' || $crypt == 'hash_dle')
 				{
 					$row = mysql_fetch_assoc(mysql_query("SELECT $db_columnId,$db_columnUser,$db_columnPass FROM $db_table WHERE $db_columnUser='{$_POST['username']}'"));
 					$realPass = $row[$db_columnPass];

@@ -13,7 +13,7 @@ $db_database - имя базы данных, значение по умолча�
 AuthMe = 'authme'
 xAuth = отсутствует (указывается вручную)
 CAuth = 'cauth'
-Joomla,IPB,XenForo,WordPress - отсутствует (указывается вручную)
+Joomla,IPB,XenForo,WordPress,vBulletin,DLE - отсутствует (указывается вручную)
 */
 $db_database	= '_xf';
 
@@ -27,6 +27,7 @@ IPB = 'members'
 XenForo = 'префикс_user' - пример 'xf_user', где "xf_" - префикс. Примечание префикс может отсутствовать - пример 'user'
 vBulletin = 'префикс_user
 WordPress = 'префикс_users' - пример 'wp_users', где "wp_" - префикс. Примечание префикс может отсутствовать - пример 'users'
+DLE = 'префикс_users'
 */
 $db_table       = 'xf_user';
 
@@ -40,6 +41,7 @@ IPB = 'member_id'
 XenForo = 'user_id'
 vBulletin = 'userid'
 WordPress = 'id'
+DLE = 'user_id'
 */
 $db_columnId  = 'user_id';
 
@@ -53,6 +55,7 @@ PB = 'name'
 XenForo = 'username'
 vBulletin = 'username'
 WordPress = 'user_login'
+DLE = 'name'
 */
 $db_columnUser  = 'username';
 
@@ -66,6 +69,7 @@ IPB = 'members_pass_hash'
 XenForo = 'data'
 vBulletin = 'password'
 WordPress = 'user_pass'
+DLE = 'password'
 */
 $db_columnPass  = 'data';
 

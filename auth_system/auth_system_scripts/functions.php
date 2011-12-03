@@ -49,6 +49,16 @@ function hash_md5()
 	return $cryptPass;
 }
 
+function hash_dle()
+{
+	global $postPass;
+	
+	$cryptPass = false;
+	$cryptPass = md5(md5($postPass));
+	
+	return $cryptPass;
+}
+
 function hash_cauth()
 {
 	global $realPass, $postPass;
