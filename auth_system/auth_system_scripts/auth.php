@@ -2,6 +2,7 @@
 define('INCLUDE_CHECK',true);
 require_once 'functions.php';
 include ("connect.php");
+$login = $_POST['user'];
 $postPass=$_POST['password'];
 $ver=$_POST['version'];
 
