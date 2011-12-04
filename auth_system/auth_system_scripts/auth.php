@@ -17,7 +17,7 @@ $ver=$_POST['version'];
 				{
 					$row = mysql_fetch_assoc(mysql_query("SELECT $db_columnUser,$db_columnPass,$db_columnSalt FROM $db_table WHERE $db_columnUser='{$_POST['user']}'"));
 					$realPass = $row[$db_columnPass];
-					$salt = $row[$db_columnOther];
+					$salt = $row[$db_columnSalt];
 				}
 					
 				if ($crypt == 'hash_xenforo')

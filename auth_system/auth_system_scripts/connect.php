@@ -81,6 +81,8 @@ $db_tableOther = 'xf_user_authenticate';
 // IPB - members_pass_salt
 //vBulletin - salt
 $db_columnSalt = 'members_pass_salt';
+
+
 /*
 $db_columnSesId - колонка id сессии
 */
