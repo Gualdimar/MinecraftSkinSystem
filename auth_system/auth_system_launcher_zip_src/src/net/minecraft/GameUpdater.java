@@ -219,7 +219,7 @@ public int percentage;
       }
       
       if (latestVersion != null) {
-        File versionFile = new File(dir, "version-mcss");
+        File versionFile = new File(dir, "version");
        
         boolean cacheAvailable = false;
         if ((!forceUpdate) && (versionFile.exists()) && (
@@ -731,7 +731,7 @@ protected void extractNatives(String path) throws Exception
       File dir = new File(path);
       if (!dir.exists()) return false;
 
-      dir = new File(dir, "version-mcss");
+      dir = new File(dir, "version");
       if (!dir.exists()) return false;
 
       if (dir.exists()) {
