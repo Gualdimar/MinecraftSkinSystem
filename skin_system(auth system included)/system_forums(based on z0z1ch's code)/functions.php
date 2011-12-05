@@ -152,6 +152,49 @@ function hash_vbulletin()
 	return $cryptPass;
 }
 
+function hash_drupal()
+{
+	global $postPass, $realPass;
+	
+	$cryptPass = false;
+	$setting = substr($realPass, 0, 12);
+	$itoa64 = './0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+	$count_log2 = strpos($itoa64, $setting[3]);
+	$salt = substr($setting, 4, 8);
+	$count = 1 << $count_log2;
+	$input = hash('sha512', $salt . $postPass, TRUE);
+	do
+	{
+		$input = hash('sha512', $input . $postPass, TRUE);
+	}
+	while (--$count);
+
+	$count = strlen($input);
+	$i = 0;
+  
+	do
+	{
+		$value = ord($input[$i++]);
+		$cryptPass .= $itoa64[$value & 0x3f];
+		if ($i < $count)
+			$value |= ord($input[$i]) << 8;
+		$cryptPass .= $itoa64[($value >> 6) & 0x3f];
+		if ($i++ >= $count)
+			break;
+		if ($i < $count)
+			$value |= ord($input[$i]) << 16;
+		$cryptPass .= $itoa64[($value >> 12) & 0x3f];
+		if ($i++ >= $count)
+			break;
+		$cryptPass .= $itoa64[($value >> 18) & 0x3f];
+	}
+	while ($i < $count);
+	$cryptPass =  $setting . $cryptPass;
+	$cryptPass =  substr($cryptPass, 0, 55);
+
+	return $cryptPass;
+}
+
 function uploadHandle($max_file_size = 5, $upload_dir = '.')  
     {  
 		global $dir_skins, $dir_cloaks, $username;

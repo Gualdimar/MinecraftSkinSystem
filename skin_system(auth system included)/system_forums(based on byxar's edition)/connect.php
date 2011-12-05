@@ -7,13 +7,13 @@ $db_port		=  3306; // Порт базы данных
 $db_user		= 'test'; // Пользователь базы данных
 $db_pass		= 'test'; // Пароль базы данных
 
-// Конфигурация базы данных для плагинов AuthMe, xAuth, CAuth и сайтав/cms/форумов Joomla, IPB, XenForo, WordPress
+// Конфигурация базы данных для плагинов AuthMe, xAuth, CAuth и сайтав/cms/форумов Joomla, IPB, XenForo, WordPress, vBulletin, DLE, Drupal
 /*
 $db_database - имя базы данных, значение по умолчанию:
 AuthMe = 'authme'
 xAuth = отсутствует (указывается вручную)
 CAuth = 'cauth'
-Joomla,IPB,XenForo,WordPress,vBulletin,DLE - отсутствует (указывается вручную)
+Joomla,IPB,XenForo,WordPress,vBulletin,DLE,Drupal - отсутствует (указывается вручную)
 */
 $db_database	= '_xf';
 
@@ -28,6 +28,7 @@ XenForo = 'префикс_user' - пример 'xf_user', где "xf_" - пре�
 vBulletin = 'префикс_user' - пример 'bb_user', где "bb_" - префикс. Примечание префикс может отсутствовать - пример 'user'
 WordPress = 'префикс_users' - пример 'wp_users', где "wp_" - префикс. Примечание префикс может отсутствовать - пример 'users'
 DLE = 'префикс_users' - пример 'dle_users', где "dle_" - префикс. Примечание префикс может отсутствовать - пример 'users'
+Drupal = 'префикс_users' - пример 'drupal_users', где "drupal_" - префикс. Примечание префикс может отсутствовать - пример 'users'
 */
 $db_table       = 'xf_user';
 
@@ -42,6 +43,7 @@ XenForo = 'user_id'
 vBulletin = 'userid'
 WordPress = 'id'
 DLE = 'user_id'
+Drupal = 'uid'
 */
 $db_columnId  = 'user_id';
 
@@ -56,6 +58,7 @@ XenForo = 'username'
 vBulletin = 'username'
 WordPress = 'user_login'
 DLE = 'name'
+Drupal = 'name'
 */
 $db_columnUser  = 'username';
 
@@ -70,6 +73,7 @@ XenForo = 'data'
 vBulletin = 'password'
 WordPress = 'user_pass'
 DLE = 'password'
+Drupal = 'pass'
 */
 $db_columnPass  = 'data';
 

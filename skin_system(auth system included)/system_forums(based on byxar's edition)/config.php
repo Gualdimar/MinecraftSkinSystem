@@ -12,7 +12,8 @@ if(!defined('INCLUDE_CHECK')) die('У вас нет прав на выполне
 'hash_xenforo' 		- интеграция с XenForo
 'hash_wordpress' 	- интеграция с WordPress
 'hash_vbulletin' 	- интеграция с vBulletin
-'hash_dle' 	- интеграция с DLE
+'hash_dle' 			- интеграция с DLE
+'hash_drupal' 		- интеграция с Drupal (v.7)
 */
 $crypt = 'hash_md5';
 

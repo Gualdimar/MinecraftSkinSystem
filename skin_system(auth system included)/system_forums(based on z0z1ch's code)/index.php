@@ -38,7 +38,7 @@ if ($login == 'on')
 	{
 		$err = array();
 		
-		if ($crypt == 'hash_md5' || $crypt == 'hash_authme' || $crypt == 'hash_xauth' || $crypt == 'hash_cauth' || $crypt == 'hash_joomla' || $crypt == 'hash_ipb' || $crypt == 'hash_xenforo' || $crypt == 'hash_wordpress' || $crypt == 'hash_vbulletin' || $crypt == 'hash_dle')
+		if ($crypt == 'hash_md5' || $crypt == 'hash_authme' || $crypt == 'hash_xauth' || $crypt == 'hash_cauth' || $crypt == 'hash_joomla' || $crypt == 'hash_ipb' || $crypt == 'hash_xenforo' || $crypt == 'hash_wordpress' || $crypt == 'hash_vbulletin' || $crypt == 'hash_dle' || $crypt == 'hash_drupal')
 		{
 		
 			if(!$_POST['username'] || !$_POST['password'])
@@ -57,7 +57,7 @@ if ($login == 'on')
 				$_POST['rememberMe'] = (int)$_POST['rememberMe'];
 				$postPass = $_POST['password'];
 			
-				if ($crypt == 'hash_md5' || $crypt == 'hash_authme' || $crypt == 'hash_xauth' || $crypt == 'hash_cauth' || $crypt == 'hash_joomla' || $crypt == 'hash_wordpress' || $crypt == 'hash_dle')
+				if ($crypt == 'hash_md5' || $crypt == 'hash_authme' || $crypt == 'hash_xauth' || $crypt == 'hash_cauth' || $crypt == 'hash_joomla' || $crypt == 'hash_wordpress' || $crypt == 'hash_dle' || $crypt == 'hash_drupal')
 				{
 					$row = mysql_fetch_assoc(mysql_query("SELECT $db_columnId,$db_columnUser,$db_columnPass FROM $db_table WHERE $db_columnUser='{$_POST['username']}'"));
 					$realPass = $row[$db_columnPass];
@@ -65,9 +65,9 @@ if ($login == 'on')
 
 				if ($crypt == 'hash_ipb' || $crypt == 'hash_vbulletin')
 				{
-					$row = mysql_fetch_assoc(mysql_query("SELECT $db_columnId,$db_columnUser,$db_columnPass,$db_columnOther FROM $db_table WHERE $db_columnUser='{$_POST['username']}'"));
+					$row = mysql_fetch_assoc(mysql_query("SELECT $db_columnId,$db_columnUser,$db_columnPass,$db_columnSalt FROM $db_table WHERE $db_columnUser='{$_POST['username']}'"));
 					$realPass = $row[$db_columnPass];
-					$salt = $row[$db_columnOther];
+					$salt = $row[$db_columnSalt];
 				}
 					
 				if ($crypt == 'hash_xenforo')
