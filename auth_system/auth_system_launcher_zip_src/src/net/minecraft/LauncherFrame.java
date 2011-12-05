@@ -98,8 +98,7 @@ public class LauncherFrame extends Frame
   public void login(String userName, String password) {
     try {
       String parameters = "user=" + URLEncoder.encode(userName, "UTF-8") + "&password=" + URLEncoder.encode(password, "UTF-8") + "&version=" + 13;
-      String result = Util.excutePost("https://login.minecraft.net/", parameters);
-//      String result = getFakeResult(userName);
+      String result = Util.excutePost("http://login.minecraft.net", parameters);
       if (result == null) {
         showError("Невозможно подключится к серверу!");
         loginForm.setNoNetwork();
