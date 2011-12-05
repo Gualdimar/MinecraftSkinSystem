@@ -8,6 +8,7 @@ https://github.com/byxar/MinecraftSkinSystem/issues
 Описание директорий:
 auth_system - файлы системы авторизации
 	auth_system_check_scripts - скрипты для проверки работоспособности системы авторизации
+	auth_system_launcher_mem_src - исходники лаунчера с функцией изменения количества RAM выделяемой для игры(в настройках)
 	auth_system_launcher_src - исходники лаунчера
 	auth_system_launcher_zip_src - исходники лаунчера с функцией zip архива. т.е. на сервере ОБЬЯЗАТЕЛЬНО должен быть архив client.zip(именно client.zip), даже пустой, при обновлении клиента архив качается и все его содержимое извлекается в папку .minecraft, после чего архив удаляется.
 	auth_system_scripts - сама система(с поддержкой форумов)
