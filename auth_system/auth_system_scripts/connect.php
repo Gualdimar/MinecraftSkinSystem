@@ -13,6 +13,7 @@ if(!defined('INCLUDE_CHECK')) die('У вас нет прав на выполне
 'hash_wordpress' 	- интеграция с WordPress
 'hash_vbulletin' 		- интеграция с vBulletin
 'hash_dle' 		- интеграция с DLE
+'hash_drupal'     - интеграция с Drupal (v.7)
 */
 $crypt = 'hash_md5';
 
@@ -23,13 +24,13 @@ $db_port		=  '3306'; // Порт базы данных
 $db_user		= 'root'; // Пользователь базы данных
 $db_pass		= 'root'; // Пароль базы данных
 
-// Конфигурация базы данных для плагинов AuthMe, xAuth, CAuth и сайтав/cms/форумов Joomla, IPB, XenForo, WordPress
+// Конфигурация базы данных для плагинов AuthMe, xAuth, CAuth и сайтав/cms/форумов Joomla, IPB, XenForo, WordPress, vBulletin, DLE, Drupal
 /*
 $db_database - имя базы данных, значение по умолчанию:
 AuthMe = 'authme'
 xAuth = отсутствует (указывается вручную)
 CAuth = 'cauth'
-Joomla,IPB,XenForo,WordPress,vBulletin - отсутствует (указывается вручную)
+Joomla,IPB,XenForo,WordPress,vBulletin,DLE, Drupal - отсутствует (указывается вручную)
 */
 $db_database	= '_xf';
 
@@ -41,8 +42,10 @@ CAuth = 'users'
 Joomla = 'префикс_users' - пример 'y3wbm_users', где "y3wbm_" - префикс. Примечание префикс может отсутствовать - пример 'users'
 IPB = 'members'
 XenForo = 'префикс_user' - пример 'xf_user', где "xf_" - префикс. Примечание префикс может отсутствовать - пример 'user'
+vBulletin = 'префикс_user' - пример 'bb_user', где "bb_" - префикс. Примечание префикс может отсутствовать - пример 'user'
 WordPress = 'префикс_users' - пример 'wp_users', где "wp_" - префикс. Примечание префикс может отсутствовать - пример 'users'
-vBulletin = 'префикс_user'
+DLE = 'префикс_users' - пример 'dle_users', где "dle_" - префикс. Примечание префикс может отсутствовать - пример 'users'
+Drupal = 'префикс_users' - пример 'drupal_users', где "drupal_" - префикс. Примечание префикс может отсутствовать - пример 'users'
 */
 $db_table       = 'xf_user';
 
@@ -56,6 +59,8 @@ PB = 'name'
 XenForo = 'username'
 WordPress = 'user_login'
 vBulletin = 'username'
+DLE = 'name'
+Drupal = 'name'
 */
 $db_columnUser  = 'username';
 
@@ -69,6 +74,8 @@ IPB = 'members_pass_hash'
 XenForo = 'data'
 WordPress = 'user_pass'
 vBulletin = 'password'
+DLE = 'password'
+Drupal = 'pass'
 */
 $db_columnPass  = 'data';
 
