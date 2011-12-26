@@ -118,11 +118,10 @@ if ($login == 'on')
 	}
 }
 
-if(isset($_GET['cloakpath']))
-{
-	$path = $_GET[cloakpath];
-	unlink($path);
-	header("Location: index.php");
+if($_POST['delete']=='Удалить'){
+	$username = $_SESSION['playername'];
+	$cloakpath = $dir_cloaks.$username.'.png';
+	unlink($cloakpath);
 }
 ?>
 
@@ -243,8 +242,8 @@ function swch(block_id) {
 											}
 											else
 											{
-												$cloakpath = $dir_cloaks.$username.'.png';
-												echo '<p><input type="button" onclick="location.href=\'index.php?cloakpath='.$cloakpath.'\'" value="Удалить" class="button"/></p><br />';
+												echo '<form action="" method="post"><input type="submit" name="delete" value="Удалить" class="button" /><br /><br /></form>';
+												
 												echo '<img src="http://'.$url.$dir.$dir_cloaks.$username.'.png" />';										
 											}
 
