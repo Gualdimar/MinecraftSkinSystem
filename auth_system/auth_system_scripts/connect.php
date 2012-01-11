@@ -50,6 +50,21 @@ Drupal = 'префикс_users' - пример 'drupal_users', где "drupal_" 
 $db_table       = 'xf_user';
 
 /*
+$db_columnId - уникальный идентификатор, значение по умолчанию
+AuthMe = 'id'
+xAuth = 'id'
+CAuth = 'id'
+Joomla = 'id'
+IPB = 'member_id'
+XenForo = 'user_id'
+vBulletin = 'userid'
+WordPress = 'id'
+DLE = 'user_id'
+Drupal = 'uid'
+*/
+$db_columnId  = 'user_id';
+
+/*
 $db_columnUser - колонка логина, значение по умолчанию:
 AuthMe = 'username'
 xAuth = 'playername'
