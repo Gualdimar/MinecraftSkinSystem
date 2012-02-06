@@ -13,6 +13,7 @@ CREATE TABLE `accounts` (
   `registerip` varchar(39) DEFAULT NULL,
   `lastlogindate` datetime DEFAULT NULL,
   `lastloginip` varchar(39) DEFAULT NULL,
-  `active` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `sesId` varchar(255) DEFAULT NULL,
+  `serverId` varchar(255) DEFAULT NULL
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;

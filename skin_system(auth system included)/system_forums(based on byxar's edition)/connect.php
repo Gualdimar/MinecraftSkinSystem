@@ -119,7 +119,7 @@ $db_columnServer - колонка id сервера
 $db_columnServer = 'server';
 
 /*
-$db_GameDatatable - имя базы данных с информацией о версиях
+$db_GameDatatable - имя таблицы с информацией о версиях
 */
 $db_GameDatatable = 'data';
 
