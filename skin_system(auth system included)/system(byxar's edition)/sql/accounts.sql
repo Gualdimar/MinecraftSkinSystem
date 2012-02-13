@@ -14,6 +14,6 @@ CREATE TABLE `accounts` (
   `lastlogindate` datetime DEFAULT NULL,
   `lastloginip` varchar(39) DEFAULT NULL,
   `sesId` varchar(255) DEFAULT NULL,
-  `serverId` varchar(255) DEFAULT NULL
+  `serverId` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
